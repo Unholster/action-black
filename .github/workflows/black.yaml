@@ -1,0 +1,12 @@
+name: Lint
+
+on: [pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Black
+        uses: "lgeiger/black-action@master"
+        with:
+          args: --check .
