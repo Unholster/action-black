@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Black
-        uses: "lgeiger/black-action@master"
+        uses: "Unholster/black-action-test@master"
         with:
           args: --verbose --check .
