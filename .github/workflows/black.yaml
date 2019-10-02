@@ -9,4 +9,4 @@ jobs:
       - name: Black
         uses: "lgeiger/black-action@master"
         with:
-          args: --check .
+          args: --verbose --check .
