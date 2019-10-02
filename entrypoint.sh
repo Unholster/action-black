@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
 
-ls .
+ls -r /
 
 sh -c "black $*"
