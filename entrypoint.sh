@@ -1,11 +1,12 @@
 #!/bin/sh
 set -e
-DIFF=$(black --diff .)
 
-if [[ -z "$DIFF" ]]
+black --check .
+OK=$?
+
+if [ $OK -ne 0 ]]
 then
-  exit 0
-else
-  echo $DIFF
-  exit 1
+  black --diff .
 fi
+
+exit $OK
