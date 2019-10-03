@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-DIFF=$(black --diff)
+DIFF=$(black --diff .)
 
 if [[ -z "$DIFF" ]]
 then
