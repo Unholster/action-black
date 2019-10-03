@@ -4,7 +4,7 @@ set -e
 black --check .
 OK=$?
 
-if [ $OK -ne 0 ]]
+if [ $OK -ne 0 ]
 then
   black --diff .
 fi
