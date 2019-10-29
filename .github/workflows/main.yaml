@@ -1,6 +1,5 @@
 name: Black Formatter
 on:
-  push:
   pull_request:
     types: [opened, synchronize, reopened, closed]
 
