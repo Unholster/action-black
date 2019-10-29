@@ -1,7 +1,10 @@
-on: pull_request
-name: auto-format
+name: Black Formatter
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
 jobs:
-  lint:
+  build:
     name: Black Code Formatter
     runs-on: ubuntu-latest
     steps:
