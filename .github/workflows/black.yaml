@@ -1,5 +1,5 @@
-name: auto-format
 on: pull_request
+name: auto-format
 jobs:
   lint:
     name: Black Code Formatter
