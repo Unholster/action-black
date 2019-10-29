@@ -5,6 +5,8 @@ set -e
 # REF=$(jq -r ".ref" "$GITHUB_EVENT_PATH")
 # echo "Ref from JSON: $REF"
 
+echo "OUIIII"
+
 if ! git status > /dev/null 2>&1
 then
   echo "## Initializing git repo..."
