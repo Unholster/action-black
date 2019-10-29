@@ -29,8 +29,8 @@ echo "### Branch: $BRANCH"
 git checkout $BRANCH
 
 echo "## Login into git..."
-git config --global user.email "black_code_formatter@gmail.com"
-git config --global user.name "Black Code Formatter"
+git config --global user.email "action@github.com"
+git config --global user.name "GitHub Action"
 
 echo "## Running Black Code Formatter"
 black $BLACK_ARGS
