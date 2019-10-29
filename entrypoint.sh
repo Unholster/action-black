@@ -5,7 +5,7 @@ set -e
 # REF=$(jq -r ".ref" "$GITHUB_EVENT_PATH")
 # echo "Ref from JSON: $REF"
 
-echo "OUIIII"
+echo "OUIIII GIT EST LA"
 
 if ! git status > /dev/null 2>&1
 then
