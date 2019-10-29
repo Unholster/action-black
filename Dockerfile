@@ -1,4 +1,4 @@
-FROM python:3.7.4-alpine
+FROM python:3-alpine3.7
 
 LABEL "com.github.actions.name"="Black Code Formatter"
 LABEL "com.github.actions.description"="Format Python code using black"
