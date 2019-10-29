@@ -7,7 +7,7 @@ LABEL "com.github.actions.color"="yellow"
 
 ADD entrypoint.sh /entrypoint.sh
 
-RUN apk add gcc musl-dev && \
+RUN apk add gcc musl-dev bash && \
     pip install black
 
 COPY entrypoint.sh /entrypoint.sh
