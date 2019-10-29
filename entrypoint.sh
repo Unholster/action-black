@@ -5,7 +5,7 @@ set -e
 # REF=$(jq -r ".ref" "$GITHUB_EVENT_PATH")
 # echo "Ref from JSON: $REF"
 
-echo "OUIIII GIT EST LA"
+echo "OUIIII"
 
 if ! git status > /dev/null 2>&1
 then
@@ -29,6 +29,8 @@ echo "### Branch: $BRANCH"
 git checkout $BRANCH
 
 echo "## Login into git..."
+git config --local user.email "action@github.com"
+git config --local user.name "GitHub Action"
 
 echo "## Running Black Code Formatter"
 black $BLACK_ARGS
