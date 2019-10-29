@@ -27,7 +27,7 @@ echo "### Branch: $BRANCH"
 git checkout $BRANCH
 
 echo "JE LANCE PYTHON OULAH"
-python3 request.py
+python3 /request.py
 
 echo "## Running Black Code Formatter"
 black $BLACK_ARGS
