@@ -1,14 +1,14 @@
-name: Black Formatter
+name: Black
 on:
   pull_request:
     types: [opened, synchronize, reopened]
 
 jobs:
   build:
-    name: Black Code Formatter
+    name: Code Formatter
     runs-on: ubuntu-latest
     steps:
-    - name: Black Code Formatter
+    - name: Code Formatter
       uses: Unholster/action-black@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
