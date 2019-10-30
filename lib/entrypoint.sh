@@ -1,10 +1,6 @@
 #!/bin/bash
 set -e
 
-# For some reason, $GITHUB_REF wasn't working before. This is a good alternative.
-# REF=$(jq -r ".ref" "$GITHUB_EVENT_PATH")
-# echo "Ref from JSON: $REF"
-
 if ! git status > /dev/null 2>&1
 then
   echo "## Initializing git repo..."
@@ -37,6 +33,6 @@ git add .
 git commit -m "Black Automatically Formatted Code" || true
 
 echo "JE LANCE PYTHON"
-python3 /lib/request.py
+python3 /lib/comment_pr.py
 
 git push -u origin $BRANCH
