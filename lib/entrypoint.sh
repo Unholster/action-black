@@ -1,18 +1,13 @@
 #!/bin/bash
 set -e
 
-if ! git status > /dev/null 2>&1
-then
-  echo "## Initializing git repo..."
-  git init
-fi
+if ! git status > /dev/null 2>&1 ; then git init ; fi
 
 REMOTE_TOKEN_URL="https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
 if ! git remote | grep "origin" > /dev/null 2>&1
 then 
   echo "### Adding git remote..."
   git remote add origin $REMOTE_TOKEN_URL
-  echo "### git fetch..."
   git fetch
 fi
 
@@ -26,8 +21,8 @@ black $BLACK_ARGS
 
 # Delay the comment to regroup the commits
 if ! git diff-index --quiet HEAD --; then CHANGES=true ; fi
-echo "voici la var $CHANGES"
-git config --local user.name "Black Code Formatter"
+
+git config --local user.name "Black Code Formatter BOT"
 git config --local user.email foo@bar.com
 
 git add .
