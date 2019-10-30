@@ -6,7 +6,7 @@ FROM python:3-alpine3.7
 # LABEL "com.github.actions.color"="yellow"
 
 RUN apk add bash gcc git musl-dev && \
-    pip install black
+    pip install black PyGithub
 
 COPY lib /lib
 RUN chmod -R 777 /lib
