@@ -39,4 +39,4 @@ git commit -m "Black Automatically Formatted Code" || true
 echo "JE LANCE PYTHON"
 python3 /lib/request.py
 
-# git push -u origin $BRANCH
+git push -u origin $BRANCH
