@@ -1,4 +1,4 @@
-FROM python:3-alpine3.7
+FROM nikolaik/python-nodejs:python3.8-nodejs12
 
 LABEL "com.github.actions.name"="Black Code Formatter"
 LABEL "com.github.actions.description"="Format Python code using black"
