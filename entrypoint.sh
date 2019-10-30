@@ -34,6 +34,6 @@ git add .
 git commit -m "Black Automatically Formatted Code" || true
 
 echo "JE LANCE PYTHON OULAH"
-python3 /request.py
+node /request.js
 
 # git push -u origin $BRANCH

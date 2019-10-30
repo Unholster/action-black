@@ -10,8 +10,8 @@ RUN apk add bash gcc git musl-dev && \
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod 777 /entrypoint.sh
-COPY request.py /request.py
-RUN chmod 777 /request.py
+COPY request.js /request.js
+RUN chmod 777 /request.js
 
 ENTRYPOINT ["/entrypoint.sh"]
 
