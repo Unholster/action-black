@@ -27,13 +27,13 @@ echo "### Branch: $BRANCH"
 git checkout $BRANCH
 
 black $BLACK_ARGS
-
+echo "next git add ,"
 git add .
-
+echo "next git commit"
 # force exit successfully
 git commit -m "Black Automatically Formatted Code" || true
 
-echo "JE LANCE PYTHON OULAH"
-node /request.js
+echo "JE LANCE PYTHON"
+python3 /lib/request.py
 
 # git push -u origin $BRANCH

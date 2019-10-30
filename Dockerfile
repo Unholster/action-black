@@ -1,4 +1,4 @@
-FROM nikolaik/python-nodejs:python3.8-nodejs12-alpine
+FROM python:3-alpine3.7
 
 # LABEL "com.github.actions.name"="Black Code Formatter"
 # LABEL "com.github.actions.description"="Format Python code using black"
@@ -8,10 +8,8 @@ FROM nikolaik/python-nodejs:python3.8-nodejs12-alpine
 RUN apk add bash gcc git musl-dev && \
     pip install black
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod 777 /entrypoint.sh
-COPY request.js /request.js
-RUN chmod 777 /request.js
+COPY lib /lib
+RUN chmod 777 /lib
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/lib/entrypoint.sh"]
 
