@@ -25,8 +25,8 @@ git checkout $BRANCH
 black $BLACK_ARGS
 
 # Delay the comment to regroup the commits
-if ! git diff-index --quiet HEAD --; then NO_CHANGES=true ; fi
-echo "voici la var $NO_CHANGES"
+if ! git diff-index --quiet HEAD --; then CHANGES=true ; fi
+echo "voici la var $CHANGES"
 git config --local user.name "Black Code Formatter"
 git config --local user.email foo@bar.com
 
@@ -37,4 +37,4 @@ git commit -m "Black Automatically Formatted Code" || true
 
 git push -u origin $BRANCH
 
-if [ "$NO_CHANGES" != true ] ; then python3 /lib/comment_pr.py ; fi
+if [ "$CHANGES" = true ] ; then python3 /lib/comment_pr.py ; fi
