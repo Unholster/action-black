@@ -9,7 +9,7 @@ RUN apk add bash gcc git musl-dev && \
     pip install black
 
 COPY lib /lib
-RUN chmod 777 /lib
+RUN chmod -R 777 /lib
 
 ENTRYPOINT ["/lib/entrypoint.sh"]
 
