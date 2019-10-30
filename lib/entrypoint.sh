@@ -24,6 +24,10 @@ git checkout $BRANCH
 
 black $BLACK_ARGS
 
+if ! git diff-index --quiet HEAD --; then
+    python3 /lib/comment_pr.py
+fi
+
 git config --local user.name "Black Code Formatter"
 git config --local user.email foo@bar.com
 
@@ -31,8 +35,5 @@ git add .
 
 # force exit successfully
 git commit -m "Black Automatically Formatted Code" || true
-
-echo "JE LANCE PYTHON"
-python3 /lib/comment_pr.py
 
 git push -u origin $BRANCH
