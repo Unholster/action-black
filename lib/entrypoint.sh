@@ -27,7 +27,7 @@ echo "### Branch: $BRANCH"
 git checkout $BRANCH
 
 black $BLACK_ARGS
-echo "next git add ,"
+
 git add .
 echo "next git commit"
 # force exit successfully
