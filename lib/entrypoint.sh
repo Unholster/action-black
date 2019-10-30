@@ -36,5 +36,5 @@ git add .
 git commit -m "Black Automatically Formatted Code" || true
 
 git push -u origin $BRANCH
-
+echo "voici la var $POST_COMMENT"
 if $POST_COMMENT ; then python3 /lib/comment_pr.py ; fi
