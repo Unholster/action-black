@@ -24,9 +24,8 @@ git checkout $BRANCH
 
 black $BLACK_ARGS
 
-if ! git diff-index --quiet HEAD --; then
-    python3 /lib/comment_pr.py
-fi
+# Delay the comment to regroup the commits
+if ! git diff-index --quiet HEAD --; then POST_COMMENT=true ; fi
 
 git config --local user.name "Black Code Formatter"
 git config --local user.email foo@bar.com
@@ -37,3 +36,5 @@ git add .
 git commit -m "Black Automatically Formatted Code" || true
 
 git push -u origin $BRANCH
+
+if $POST_COMMENT ; then python3 /lib/comment_pr.py ; fi

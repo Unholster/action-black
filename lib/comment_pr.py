@@ -8,4 +8,4 @@ pr_number = os.environ["GITHUB_REF"].split("/")[2]
 g = Github(github_token)
 repo = g.get_repo(github_repository)
 pr = repo.get_pull(int(pr_number))
-pr.create_issue_comment("Formatted by BLACK")
+pr.create_issue_comment("Formatted using https://github.com/psf/black")
