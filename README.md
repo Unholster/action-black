@@ -7,18 +7,21 @@ If a commit contains non-black formatted code, it will automatically run black a
 
 ## Usage
 
+In `/.github/workflows/exemple.yaml`
 ```
-name: Assign reviewers based on assignees
+name: Black
 on:
   pull_request:
-    types: [assigned, unassigned]
+    types: [opened, synchronize, reopened]
 
 jobs:
-  assignee_to_reviewer:
+  build:
+    name: Code Formatter
     runs-on: ubuntu-latest
     steps:
-      - name: Assignee to Reviewer
-        uses: pullreminders/assignee-to-reviewer-action@v1.0.4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Code Formatter
+      uses: Unholster/action-black@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BLACK_ARGS: "."
 ```
