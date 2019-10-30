@@ -28,8 +28,8 @@ git checkout $BRANCH
 
 black $BLACK_ARGS
 
-git config user.name "Black Code Formatter"
-git config user.email foo@bar.com
+git config --local user.name "Black Code Formatter"
+git config --local user.email foo@bar.com
 
 git add .
 
