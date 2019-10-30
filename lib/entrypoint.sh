@@ -28,8 +28,11 @@ git checkout $BRANCH
 
 black $BLACK_ARGS
 
+git config user.name "Black Code Formatter"
+git config user.email foo@bar.com
+
 git add .
-echo "next git commit"
+
 # force exit successfully
 git commit -m "Black Automatically Formatted Code" || true
 
