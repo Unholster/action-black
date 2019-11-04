@@ -7,7 +7,7 @@ If a commit contains non-black formatted code, it will automatically run black a
 
 ## Usage
 
-In `/.github/workflows/exemple.yaml`
+In `/.github/workflows/example.yaml`
 ```
 name: Black
 on:
